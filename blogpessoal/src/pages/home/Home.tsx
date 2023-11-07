@@ -1,4 +1,5 @@
 function Home() {
+
     return (
         <>
             <div className="bg-indigo-900 flex justify-center">
@@ -22,7 +23,7 @@ function Home() {
 
                     <div className="flex justify-center ">
                         <img
-                            src="https://i.imgur.com/fyfri1v.png"
+                            src="https://2.bp.blogspot.com/-_OyThLh_BuU/Ungmimv8IGI/AAAAAAAAAvI/IvPiiNPVD2s/s1600/bear12.png"
                             alt="Imagem Página Home"
                             className='w-2/3'
                         />
