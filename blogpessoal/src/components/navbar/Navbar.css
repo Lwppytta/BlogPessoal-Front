@@ -1,0 +1,43 @@
+#menuNavbar a {
+    padding: 2vw;
+}
+
+/*Menu*/
+#dropNavbar ul {
+    list-style-type: none;
+    background-color: #7c3aed;
+    margin: 0;
+    padding: 0;
+}
+
+#dropNavbar ul li {
+    display: inline;
+    position: relative;
+}
+
+#dropNavbar ul li a {
+    display: inline-block;
+    transition: background .3s;
+}
+
+#dropNavbar ul li a:hover {
+    background-color: #7331e6;
+}
+
+/*DropMenu*/
+#dropNavbar ul ul {
+    display: none;
+    position: absolute;
+    width: auto;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+#dropNavbar ul li:hover ul {
+    display: block;
+}
+
+#dropNavbar ul ul li a{
+    display: block;
+    border-radius: 0 0 5px 5px;
+}
