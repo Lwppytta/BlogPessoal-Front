@@ -25,15 +25,15 @@ function Navbar() {
 
                     <div id="dropNavbar">
                         <ul>
-                            <li><a>Postagem</a></li>
+                            <li><Link to='/postagens' >Postagens</Link></li>
                             <li>
-                                <a>Temas</a>
+                                <Link to=''>Temas</Link>
                                 <ul>
                                     <li><Link to='/temas' >Todos</Link></li>
                                     <li><Link to='/cadastroTema'>Cadastrar</Link></li>
                                 </ul>
                             </li>
-                            <li><a>Perfil</a></li>
+                            <li><Link to=''>Perfil</Link></li>
                             <li><Link to='' onClick={logout}>Sair</Link></li>
                         </ul>
                     </div>
