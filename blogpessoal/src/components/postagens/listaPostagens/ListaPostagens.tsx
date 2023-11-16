@@ -7,6 +7,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 
 import Postagem from '../../../models/Postagem';
 import CardPostagens from '../cardPostagens/CardPostagens';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 function ListaPostagens() {
 
@@ -27,7 +28,7 @@ function ListaPostagens() {
 
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token expirou, favor logar novamente')
+                toastAlerta("Sessão expirada...", "erro");
                 handleLogout()
             }
         }
@@ -35,7 +36,7 @@ function ListaPostagens() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            toastAlerta("Sessão expirada...", "erro");
             navigate('/');
         }
     }, [token])
@@ -57,8 +58,11 @@ function ListaPostagens() {
                 />
             )}
 
-            <div className='container mx-auto my-4 
-        grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+
+            <div className='container w-[80vw] mx-auto my-4 grid grid-cols-3 gap-4'>
+                <div className='col-span-3 text-center text-3xl text-violet-950 font-bold'>
+                    <h1>Postagens</h1>
+                </div>
 
                 {postagens.map((postagem) => (
                     <CardPostagens key={postagem.id} post={postagem} />

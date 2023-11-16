@@ -1,0 +1,9 @@
+.swiper{
+    z-index: 1;
+}
+
+.slide-imagem {
+    width: 100vw;
+    height: 47vh;
+    object-fit: cover;
+}
