@@ -11,7 +11,7 @@ function Footer() {
 
     if (usuario.token !== '') {
         component = (
-            <div className="flex justify-center bg-violet-600 text-white">
+            <div className="flex justify-center bg-violet-600 bg-gradient-to-t from-[#00000001] to-[#00000063] text-white">
                 <div className="container flex flex-col items-center py-4">
                     <p className='text-xl font-bold'>
                         Blog Pessoal Generation | Copyright: {data}

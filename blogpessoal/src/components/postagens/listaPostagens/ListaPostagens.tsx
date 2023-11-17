@@ -59,7 +59,7 @@ function ListaPostagens() {
             )}
 
 
-            <div className='container w-[80vw] mx-auto my-4 grid grid-cols-3 gap-4'>
+            <div className='container z-0 w-[80vw] h-[100vh] px-[1vw] shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] mx-auto my-0 grid grid-cols-3 gap-4'>
                 <div className='col-span-3 text-center text-3xl text-violet-950 font-bold'>
                     <h1>Postagens</h1>
                 </div>
@@ -68,6 +68,9 @@ function ListaPostagens() {
                     <CardPostagens key={postagem.id} post={postagem} />
                 ))}
 
+                <div className='col-span-3 text-center text-3xl text-violet-950 font-bold'>
+                    <h1>Postagens</h1>
+                </div>
             </div>
         </>
     )
