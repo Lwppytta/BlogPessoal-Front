@@ -1,9 +1,21 @@
-.swiper{
-    z-index: 1;
+.container{
+    margin: 0;
 }
 
 .slide-imagem {
     width: 100vw;
-    height: 47vh;
+    height: 45vh;
     object-fit: cover;
+}
+
+.container .swiper-pagination-bullet-active{
+    background-color: antiquewhite;
+}
+
+.container .swiper-button-prev {
+    color: #5593f7;
+}
+
+.container .swiper-button-next{
+    color: #5593f7;
 }

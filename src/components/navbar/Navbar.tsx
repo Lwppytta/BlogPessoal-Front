@@ -14,32 +14,32 @@ function Navbar() {
 
     function logout() {
         handleLogout()
-        toastAlerta('Usuário deslogado com sucesso','sucesso')
+        toastAlerta('Usuário deslogado com sucesso', 'sucesso')
         navigate('/login')
     }
 
     if (usuario.token !== '') {
         component = (
-            <div id="menuNavbar" className='w-full bg-violet-600 text-white
-        flex justify-center '>
+            <div className='w-full font-fontBlog bg-gradient-to-b from-[#b18af4] to-[#7c3aed] justify-center'>
+                <div className="w-full flex justify-between text-purple-900 text-lg pl-[2vw]">
 
-                <div className="container flex justify-between text-lg">
-                    <Link to='/home' className='text-2xl font-bold'>Blog Pessoal</Link>
+                    <Link to='/home'>
+                        <img src=".\src\assets\logo.png" alt="LogoNav" className="min-w-[6vw] w-[6vw] my-1" />
+                    </Link>
 
-                    <div id="dropNavbar">
-                        <ul>
-                            <li><Link to='/postagens' >Postagens</Link></li>
-                            <li>
-                                <Link to=''>Temas</Link>
-                                <ul>
-                                    <li><Link to='/temas' >Todos</Link></li>
-                                    <li><Link to='/cadastroTema'>Cadastrar</Link></li>
-                                </ul>
-                            </li>
-                            <li><Link to='/perfil'>Perfil</Link></li>
-                            <li><Link to='/teste'>Teste</Link></li>
-                            <li><Link to='' onClick={logout}>Sair</Link></li>
-                        </ul>
+                    <div id="dropNavbar" className='flex'>
+
+                        <Link to='/postagens' className='aparente'>Postagens</Link>
+                        <div className='mae'>
+                            <Link to='/temas' className='aparente'>Temas</Link>
+                            <div className='filha'>
+                                <Link to='/temas' >Todos</Link>
+                                <Link to='/cadastroTema'>Cadastrar</Link>
+                            </div>
+                        </div>
+                        <Link to='/perfil' className='aparente'>Perfil</Link>
+                        <Link to='' onClick={logout} className='aparente'>Sair</Link>
+
                     </div>
                 </div>
             </div>

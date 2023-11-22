@@ -133,7 +133,7 @@ function FormularioPostagem() {
     const carregandoTema = tema.descricao === '';
 
     return (
-        <div className="container flex flex-col mx-auto items-center">
+        <div className="container font-fontBlog flex flex-col mx-auto items-center pb-8">
             <h1 className="text-4xl text-center my-8">
                 {id !== undefined ? 'Editar Postagem' : 'Cadastrar Postagem'}
             </h1>

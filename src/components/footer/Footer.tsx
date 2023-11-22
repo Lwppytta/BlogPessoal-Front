@@ -11,16 +11,23 @@ function Footer() {
 
     if (usuario.token !== '') {
         component = (
-            <div className="flex justify-center bg-violet-600 bg-gradient-to-t from-[#00000001] to-[#00000063] text-white">
-                <div className="container flex flex-col items-center py-4">
-                    <p className='text-xl font-bold'>
-                        Blog Pessoal Generation | Copyright: {data}
-                    </p>
-                    <p className='text-lg'>Acesse nossas redes sociais</p>
-                    <div className='flex gap-2'>
-                        <LinkedinLogo size={40} weight='bold' />
-                        <InstagramLogo size={40} weight='bold' />
-                        <FacebookLogo size={40} weight='bold' />
+            <div className="w-full font-fontBlog text-[2vw] bg-gradient-to-b from-cyan-500 to-blue-500 justify-center">
+                <div className="w-full flex justify-between text-sky-900 items-center px-4 py-2">
+                    <div className='flex flex-col'>
+                        <LinkedinLogo size={30} weight='bold' />
+                        <InstagramLogo size={30} weight='bold' />
+                        <FacebookLogo size={30} weight='bold' />
+                    </div>
+
+                    <div className=''>
+                        <p className='text-xl font-bold'>Blog Pessoal Generation</p>
+                        <p className=''>Copyright: {data}</p>
+                    </div>
+
+                    <div className="flex flex-col text-end align-center">
+                        <p className="hover:text-cyan-800 cursor-pointer p-0">Politica de Privacidade</p>
+                        <p className="hover:text-cyan-800 cursor-pointer p-0 ">Termos e Condições</p>
+                        <a href="" className="hover:text-cyan-800 p-0">Sobre mim!</a>
                     </div>
                 </div>
             </div>

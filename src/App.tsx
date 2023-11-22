@@ -17,8 +17,6 @@ import Perfil from './pages/perfil/Perfil';
 
 import 'react-toastify/dist/ReactToastify.css';
 
-import Teste from './components/slide/Teste';
-
 function App() {
   return (
     <>
@@ -41,8 +39,6 @@ function App() {
               <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
               <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
               <Route path="/perfil" element={<Perfil />} />
-            
-              <Route path="/teste" element={<Teste />} />
             </Routes>
           </div>
           <Footer />

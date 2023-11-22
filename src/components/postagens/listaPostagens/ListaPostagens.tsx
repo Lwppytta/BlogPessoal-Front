@@ -8,6 +8,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Postagem from '../../../models/Postagem';
 import CardPostagens from '../cardPostagens/CardPostagens';
 import { toastAlerta } from '../../../utils/toastAlerta';
+import ModalPostagem from '../modalPostagem/ModalPostagem';
 
 function ListaPostagens() {
 
@@ -47,30 +48,26 @@ function ListaPostagens() {
 
     return (
         <>
-            {postagens.length === 0 && (
-                <Dna
-                    visible={true}
-                    height="200"
-                    width="200"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper mx-auto"
-                />
-            )}
+            <div className='font-fontBlog container z-0 w-[80vw] h-[100vh] px-[1vw] py-4 shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] mx-auto my-0 grid grid-cols-3 gap-4'>
+                <div></div>
+                <h1 className='text-center text-3xl text-violet-950 font-bold'>Postagens</h1>
+                <div className='justify-self-center'><ModalPostagem /></div>
 
-
-            <div className='container z-0 w-[80vw] h-[100vh] px-[1vw] shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] mx-auto my-0 grid grid-cols-3 gap-4'>
-                <div className='col-span-3 text-center text-3xl text-violet-950 font-bold'>
-                    <h1>Postagens</h1>
-                </div>
+                {postagens.length === 0 && (
+                    <Dna
+                        visible={true}
+                        height="200"
+                        width="200"
+                        ariaLabel="dna-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="dna-wrapper mx-auto"
+                    />
+                )}
 
                 {postagens.map((postagem) => (
                     <CardPostagens key={postagem.id} post={postagem} />
                 ))}
 
-                <div className='col-span-3 text-center text-3xl text-violet-950 font-bold'>
-                    <h1>Postagens</h1>
-                </div>
             </div>
         </>
     )
