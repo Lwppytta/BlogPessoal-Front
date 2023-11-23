@@ -1,0 +1,9 @@
+.direita p, a{
+    font-size: 1.5vw;
+    line-height: 1.8vw;
+}
+
+.direita p:hover, a:hover{
+    color: rgb(21, 94, 117);
+    cursor: pointer;
+}

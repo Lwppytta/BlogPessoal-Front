@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         fontBlog: ["Akaya Telivigala"],
+        fontLogo: ["Ephesis"],
       },
     },
   },

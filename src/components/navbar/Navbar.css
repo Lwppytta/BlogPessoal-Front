@@ -1,3 +1,7 @@
+a:hover{
+    color: #e6e6e6;
+}
+
 #dropNavbar a{
     display: block;
 }
@@ -6,7 +10,7 @@
     padding: 2vw 2.5vw;
     font: bold;
     cursor: pointer;
-    font-size: 2.5vw;
+    font-size: 1.6vw;
 }
 
 #dropNavbar .aparente:hover{
@@ -25,9 +29,10 @@
 }
 
 #dropNavbar .mae .filha a{
-    padding-bottom: 1vw;
+    padding-bottom: .5vw;
     padding-left: 1vw;
-    padding-right: 0.5vw;
+    padding-right: 2.05vw;
+    font-size: 1.5vw;
 }
 
 #dropNavbar .mae:hover .filha {
