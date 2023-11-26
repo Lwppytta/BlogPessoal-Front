@@ -16,6 +16,8 @@ import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPosta
 import Perfil from './pages/perfil/Perfil';
 
 import 'react-toastify/dist/ReactToastify.css';
+import "./App.css"
+import Teste from './pages/teste/Teste';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
               <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
               <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
               <Route path="/perfil" element={<Perfil />} />
+
+              <Route path="/teste" element={<Teste />} />
             </Routes>
           </div>
           <Footer />

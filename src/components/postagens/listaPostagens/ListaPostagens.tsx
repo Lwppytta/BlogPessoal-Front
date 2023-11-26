@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Dna } from 'react-loader-spinner';
+import { Hearts } from 'react-loader-spinner';
 
 import { buscar } from '../../../services/Service';
 import { AuthContext } from '../../../contexts/AuthContext';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 import Postagem from '../../../models/Postagem';
 import CardPostagens from '../cardPostagens/CardPostagens';
-import { toastAlerta } from '../../../utils/toastAlerta';
 import ModalPostagem from '../modalPostagem/ModalPostagem';
 
 function ListaPostagens() {
@@ -48,20 +48,23 @@ function ListaPostagens() {
 
     return (
         <>
-            <div className='font-fontBlog container z-0 w-[80vw] h-[100vh] px-[1vw] py-4 shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] mx-auto my-0 grid grid-cols-3 gap-4'>
+            <div className='font-fontBlog grid grid-cols-3 gap-4 z-0 w-[80vw] px-[1vw] py-4 mx-auto my-0 bg-[white] shadow-[0px_8px_10px_10px_rgba(0,0,0,0.3)]'>
                 <div></div>
                 <h1 className='text-center text-3xl text-violet-950 font-bold'>Postagens</h1>
                 <div className='justify-self-center'><ModalPostagem /></div>
 
                 {postagens.length === 0 && (
-                    <Dna
-                        visible={true}
-                        height="200"
-                        width="200"
-                        ariaLabel="dna-loading"
-                        wrapperStyle={{}}
-                        wrapperClass="dna-wrapper mx-auto"
-                    />
+                    <div className='col-span-3 justify-self-center'>
+                        <Hearts
+                            height="80"
+                            width="80"
+                            color="#7c3aed"
+                            ariaLabel="hearts-loading"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                            visible={true}
+                        />
+                    </div>
                 )}
 
                 {postagens.map((postagem) => (

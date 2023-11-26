@@ -21,7 +21,7 @@ function Navbar() {
 
     if (usuario.token !== '') {
         component = (
-            <div className='w-full font-fontBlog bg-gradient-to-b from-[#b18af4] to-[#7c3aed]'>
+            <div className='NavbarP w-full font-fontBlog bg-gradient-to-b from-[#b18af4] to-[#7c3aed]'>
                 <div className="w-full flex justify-between text-purple-900 pl-[2vw] items-center">
                     
                     <div>
@@ -45,6 +45,7 @@ function Navbar() {
                             </div>
                         </div>
                         <Link to='/perfil' className='aparente'>Perfil</Link>
+                        <Link to='/teste' className='aparente'>teste</Link>
                         <Link to='' onClick={logout} className='aparente'>Sair</Link>
 
                     </div>

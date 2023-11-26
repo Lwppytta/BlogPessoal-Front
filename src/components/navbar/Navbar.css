@@ -1,4 +1,8 @@
-a:hover{
+.NavbarP {
+    z-index: 2;
+}
+
+.NavbarP a:hover{
     color: #e6e6e6;
 }
 
