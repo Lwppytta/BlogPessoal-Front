@@ -90,6 +90,21 @@ function Teste() {
 
                 <div className="col-span-4 grid grid-cols-3 gap-4">
                     <h1 className='col-span-3'>Todas as postagens:</h1>
+
+                    {postagens.length === 0 && (
+                        <div className='col-span-3 justify-self-center'>
+                            <Hearts
+                                height="80"
+                                width="80"
+                                color="#7c3aed"
+                                ariaLabel="hearts-loading"
+                                wrapperStyle={{}}
+                                wrapperClass=""
+                                visible={true}
+                            />
+                        </div>
+                    )}
+
                     {postagens.map((val) => (
                         <CardTeste key={val.id} val={val} />
                     ))}
