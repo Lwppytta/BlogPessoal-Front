@@ -72,7 +72,7 @@ function Teste() {
         });
         setPostagens(updateItems);
     }
-
+    
     return (
         <>
             <div className='font-fontBlog grid grid-cols-5 gap-4 z-0 w-[80vw] px-[1vw] py-4 mx-auto my-0 bg-[white] shadow-[0px_8px_10px_10px_rgba(0,0,0,0.3)]'>
